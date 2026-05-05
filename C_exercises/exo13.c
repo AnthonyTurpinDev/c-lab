@@ -1,0 +1,1 @@
+// Créer un tableau de 5 notes, calculer la moyenne, afficher avec 2 décimales.

@@ -1,0 +1,1 @@
+//  Demander une phrase avec fgets, supprimer le \n, compter et afficher le nombre de voyelles.

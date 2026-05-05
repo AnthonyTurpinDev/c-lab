@@ -1,0 +1,1 @@
+// Créer un tableau de mots {"zéro","un","deux",...,"neuf"}. Demander un caractère, afficher le mot correspondant.
