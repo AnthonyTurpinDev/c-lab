@@ -18,4 +18,4 @@ int main(void) {
         printf("%c", x[i]);
     }
     printf("%c\n", x);
-}
+} 
