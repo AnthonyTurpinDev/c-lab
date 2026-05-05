@@ -5,27 +5,17 @@
 
 int main(void) {
     char x[100];
-    int i, len; 
-    printf("donne moi une phrase:", x);
-    fgets(x, 100, stdin);
+    int i, len;
+    printf("demande : ");
+    fgets(x; 100; stdin);
 
-    len = strlen(x);
-    if (x[len-1] == "\n") {
-        x[len-1] = '\0'; 
+    int len = strlen(x);
+    if (x[len-1] == '\n') {
+        x[len-1] = '\0'
     }
 
-    len = strlen(x);
-
-    printf("À l'envers : ");
-    for (i = len - 1; i >= 0; i--) {
-        printf("%c", str[i]);
+    for (int i = len - 1; i >= 0; i--) {
+        printf("%c", x[i]);
     }
-    printf("\n");
-
-    return 0;
-
-
-
-
-
+    printf("%c\n", x);
 }

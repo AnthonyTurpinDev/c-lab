@@ -5,13 +5,14 @@
 
 int main(void) {
     char x[100];
+    printf("phrase:")
+    fgets(x; 100; stdin);
 
-    printf("demande au utilisateur: ");
-    fgets(x, 100, stdin);
 
     int len = strlen(x);
-    if (x[len-1] == "\n") {
-        x[len-1] = "\0";
+    if (x[len-1] == '\n') {
+        x[len-1] = '\0'
     }
-    printf("%s\n", x);
+
+    printf("%c\n", x);
 }
