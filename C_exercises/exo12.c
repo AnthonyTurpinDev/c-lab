@@ -7,11 +7,11 @@ int main(void) {
     char x[100];
     int i, len;
     printf("demande : ");
-    fgets(x; 100; stdin);
+    fgets(x, 100, stdin);
 
     int len = strlen(x);
     if (x[len-1] == '\n') {
-        x[len-1] = '\0'
+        x[len-1] = '\0';
     }
 
     for (int i = len - 1; i >= 0; i--) {
