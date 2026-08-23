@@ -1,6 +1,18 @@
+# Build artifacts
+build/
 *.o
+*.a
 *.out
 *.exe
-.vscode/
+
+# Local workspace
+playground/*
+!playground/.gitkeep
+.vscode/*.user
+.vscode/*.code-workspace
+
+# Editor and OS files
+.vscode/settings.json
 *.swp
 *~
+.DS_Store

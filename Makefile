@@ -1,18 +1,34 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-SRC = $(wildcard *.c)
-OBJ = $(SRC:.c=.o)
-TARGET = program
+CC      = gcc
+CFLAGS  = -Wall -Wextra -Werror
+CPPFLAGS = -Iinclude
+AR      = ar
+ARFLAGS = rcs
 
-all: $(TARGET)
+NAME    = build/c_lab.exe
+LIB     = build/libmy.a
+LIB_SRC = $(wildcard lib/*.c)
+LIB_OBJ = $(LIB_SRC:lib/%.c=build/lib/%.o)
+SRC     ?= src/01_basics/solutions/hello.c
 
-$(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+all: $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(NAME): $(SRC) $(LIB)
+	@if not exist build mkdir build
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(SRC) $(LIB) -o $@
+
+$(LIB): $(LIB_OBJ)
+	@if not exist build mkdir build
+	$(AR) $(ARFLAGS) $@ $^
+
+build/lib/%.o: lib/%.c include/my.h
+	@if not exist build\lib mkdir build\lib
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(TARGET) *.out *.exe
+	@if exist build rmdir /s /q build
 
-.PHONY: all clean
+fclean: clean
+
+re: fclean all
+
+.PHONY: all clean fclean re

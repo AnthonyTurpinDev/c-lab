@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C-Lab: debug current build",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/c_lab.exe",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "preLaunchTask": "C-Lab: build",
+            "externalConsole": false
+        }
+    ]
+}
