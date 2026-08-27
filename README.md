@@ -1,31 +1,31 @@
-# C-Lab
+# Lab.C
 
-Laboratoire personnel de progression en C, organise comme un projet professionnel.
-Chaque exercice doit etre compris, teste, relu et documente avant d'etre considere
-termine.
+Lab.C est un laboratoire d'entrainement focalise sur le C, les fondamentaux
+systeme et les methodes de travail utiles a Epitech. Le but n'est pas
+d'accumuler des fichiers : chaque exercice doit etre compris, teste, relu et
+documente.
 
-## Progression
+## Parcours
 
-| Chapitre | Sujet | Etat |
-| --- | --- | --- |
-| 01 | Variables, types, `printf` | En cours |
-| 02 | Conditions, `switch` | A faire |
-| 03 | Boucles | A faire |
-| 04 | Fonctions, recursion | Batch 6 + S10-S13 ajoutes |
-| 05 | Pointeurs | S1-S4 ajoutes |
-| 06 | Tableaux | Batch 7 + S6 ajoute |
-| 07 | Chaines | Batch 7 + exo 43 ajoutes |
-| 08 | Structures | S14-S17 ajoutes |
-| 09 | Gestion memoire | Exos 44-45 + S5-S9 ajoutes |
-| 10 | Fichiers et descripteurs | S18-S20 ajoutes |
+Le parcours pedagogique est organise en blocs :
 
-## Regles de travail
+1. `00_fondations/` : syntaxe, types, conditions, boucles et fonctions.
+2. `01_donnees/` : tableaux et chaines de caracteres.
+3. `02_memoire/` : pointeurs et allocation dynamique.
+4. `03_structures_de_donnees/` : structures, fichiers et listes chainees.
+5. `04_algorithmique/` : recursion, complexite, tri et recherche.
+6. `05_outils_dev/` : Makefile, debugging, modularisation et Git.
+7. `06_epitech_prep/` : simulations et katas chronometres.
+8. `07_projets/` : projets complets, ouverts lorsque les bases sont solides.
 
-1. Lire l'enonce et definir les cas limites avant de coder.
-2. Ecrire une solution personnelle dans `exos/`.
-3. Compiler avec `-Wall -Wextra -Werror` et tester les erreurs.
-4. Comparer avec `solutions/` uniquement apres la tentative.
-5. Noter le bilan dans `logs/` et archiver les corrections importantes dans `corrections/`.
+Les exercices deja realises sont conserves dans `src/`. Ils constituent
+l'historique de travail actuel ; les nouvelles seances suivront progressivement
+la structure ci-dessus.
+
+## Tableau de bord
+
+Consulter [PROGRESS.md](PROGRESS.md) pour savoir quoi travailler ensuite et
+[CONVENTIONS.md](CONVENTIONS.md) pour les regles du laboratoire.
 
 ## Commandes
 
