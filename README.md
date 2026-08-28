@@ -27,6 +27,9 @@ la structure ci-dessus.
 Consulter [PROGRESS.md](PROGRESS.md) pour savoir quoi travailler ensuite et
 [CONVENTIONS.md](CONVENTIONS.md) pour les regles du laboratoire.
 
+Pour reprendre progressivement et t'entrainer avant la Piscine, suivre le
+[parcours d'exercices](src/11_piscine/README.md).
+
 ## Commandes
 
 ```text

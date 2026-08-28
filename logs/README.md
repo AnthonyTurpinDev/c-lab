@@ -5,8 +5,8 @@ Une entree par session : date, objectif, notions travaillees, blocage, prochaine
 Format conseille :
 
 ```text
-## AAAA-MM-JJ
-- Objectif :
+## 2026-08-28
+- Objectif : faire tout les exo des base de C 
 - Travail realise :
 - Blocage / lecon :
 - Prochaine action :

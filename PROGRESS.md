@@ -16,5 +16,6 @@ utilisee dans un exercice inedit et reliee a une erreur classique.
 | Structures | Structures et listes chainees | en cours | — | — |
 | Outils | Makefile et compilation | en cours | 2026-08-27 | — |
 | Outils | Debugging et Git | a faire | — | — |
+| Preparation | Parcours Piscine | a faire | — | — |
 
 Statuts autorises : `a faire`, `en cours`, `maitrise`.
