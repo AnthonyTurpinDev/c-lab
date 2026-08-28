@@ -17,5 +17,6 @@ utilisee dans un exercice inedit et reliee a une erreur classique.
 | Outils | Makefile et compilation | en cours | 2026-08-27 | — |
 | Outils | Debugging et Git | a faire | — | — |
 | Preparation | Parcours Piscine | a faire | — | — |
+| Preparation | Reorganisation `c-training` | en cours | 2026-08-28 | — |
 
 Statuts autorises : `a faire`, `en cours`, `maitrise`.

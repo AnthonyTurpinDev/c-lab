@@ -9,7 +9,7 @@ documente.
 
 Le parcours pedagogique est organise en blocs :
 
-1. `00_fondations/` : syntaxe, types, conditions, boucles et fonctions.
+1. `00_fondations/` : syntaxe et compilation.
 2. `01_donnees/` : tableaux et chaines de caracteres.
 3. `02_memoire/` : pointeurs et allocation dynamique.
 4. `03_structures_de_donnees/` : structures, fichiers et listes chainees.
@@ -21,6 +21,10 @@ Le parcours pedagogique est organise en blocs :
 Les exercices deja realises sont conserves dans `src/`. Ils constituent
 l'historique de travail actuel ; les nouvelles seances suivront progressivement
 la structure ci-dessus.
+
+Le parcours complet et reorganise se trouve dans
+[`c-training/`](c-training/README.md), avec un dossier par notion, des mini
+projets et des simulations de Piscine.
 
 ## Tableau de bord
 
