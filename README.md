@@ -1,51 +1,65 @@
-# Lab.C
+# Lab.C — Laboratoire d'entraînement C
 
-Lab.C est un laboratoire d'entrainement focalise sur le C, les fondamentaux
-systeme et les methodes de travail utiles a Epitech. Le but n'est pas
-d'accumuler des fichiers : chaque exercice doit etre compris, teste, relu et
-documente.
+> Un système d'entraînement focalisé sur les fondamentaux du C, la programmation système et les méthodes de travail (Git, debugging, Makefile).
 
-## Parcours
+---
 
-Le parcours pedagogique est organise en blocs :
+## Philosophie
 
-1. `00_fondations/` : syntaxe et compilation.
-2. `01_donnees/` : tableaux et chaines de caracteres.
-3. `02_memoire/` : pointeurs et allocation dynamique.
-4. `03_structures_de_donnees/` : structures, fichiers et listes chainees.
-5. `04_algorithmique/` : recursion, complexite, tri et recherche.
-6. `05_outils_dev/` : Makefile, debugging, modularisation et Git.
-7. `06_epitech_prep/` : simulations et katas chronometres.
-8. `07_projets/` : projets complets, ouverts lorsque les bases sont solides.
+**Lab.C n'est pas un dossier d'exercices. C'est un système d'entraînement.**
 
-Les exercices deja realises sont conserves dans `src/`. Ils constituent
-l'historique de travail actuel ; les nouvelles seances suivront progressivement
-la structure ci-dessus.
+1. **La friction avant la solution** — Chaque exercice est d'abord une lutte. Comprendre pourquoi ça marche vaut mieux que 100 exercices résolus à moitié.
+2. **La trace vaut plus que le code** — Ce qui compte : qu'est-ce que j'ai raté avant de réussir, et pourquoi je le ratais.
+3. **La progression doit être lisible** — Ouvrir Lab.C dans 6 mois doit te permettre de comprendre en 2 minutes où tu en es.
 
-Le parcours complet et reorganise se trouve dans
-[`c-training/`](c-training/README.md), avec un dossier par notion, des mini
-projets et des simulations de Piscine.
+---
 
-## Tableau de bord
+## Navigation
 
-Consulter [PROGRESS.md](PROGRESS.md) pour savoir quoi travailler ensuite et
-[CONVENTIONS.md](CONVENTIONS.md) pour les regles du laboratoire.
+- **[PROGRESS.md](PROGRESS.md)** — Tableau de bord central : statut de chaque notion (🔴 pas vu | 🟡 en cours | 🟢 maîtrisé)
+- **[CONVENTIONS.md](CONVENTIONS.md)** — Règles de nommage, structure, Git
+- **[docs/](docs/)** — Documentation, cheatsheets, journal d'entraînement
 
-Pour reprendre progressivement et t'entrainer avant la Piscine, suivre le
-[parcours d'exercices](src/11_piscine/README.md).
+### Structure pédagogique
 
-## Commandes
+1. **[00_fondations/](00_fondations/)** — Syntaxe, compilation, types, conditions, boucles, fonctions
+2. **[01_donnees/](01_donnees/)** — Tableaux, chaînes de caractères
+3. **[02_memoire/](02_memoire/)** — Pointeurs, allocation dynamique
+4. **[03_structures_de_donnees/](03_structures_de_donnees/)** — Structs, fichiers, listes chaînées
+5. **[04_algorithmique/](04_algorithmique/)** — Récursivité, complexité, tri/recherche
+6. **[05_outils_dev/](05_outils_dev/)** — Makefile, debugging (gdb/valgrind), modularisation, Git
+7. **[06_epitech_prep/](06_epitech_prep/)** — Simulations piscine et katas chronométrés
+8. **[07_projets/](07_projets/)** — Vrais petits projets complets
 
-```text
-mingw32-make       # compilation du programme exemple
-mingw32-make clean # suppression des artefacts de build
-mingw32-make re    # reconstruction complete
-```
+---
 
-Pour compiler un autre fichier :
+## Comment utiliser Lab.C
 
-```text
-mingw32-make SRC=src/02_conditions/solutions/example.c
-```
+### Pour débuter
+
+1. Consulte [PROGRESS.md](PROGRESS.md) pour voir où tu en es
+2. Choisis une notion marquée 🔴 ou 🟡 dans l'ordre pédagogique
+3. Travaille les exercices du dossier correspondant
+4. Écris un `notes.md` honnête : ce qui a coincé, ce que tu as compris
+5. Fais un commit Git propre
+
+### Quand tu es bloqué
+
+- Minimum 15-20 minutes de debugging autonome avec `gdb`/`valgrind` avant de demander de l'aide
+- Nota l'erreur si elle se répète → elle peut aller dans `docs/erreurs_frequentes.md`
+
+### Quand tu maîtrises une notion
+
+- Marque-la 🟢 dans PROGRESS.md
+- Envisage d'écrire une cheatsheet dans `docs/cheatsheets/`
+
+---
+
+## Dernière MAJ
+
+- Créé : 2026-08-30
+- Statut : Squelette initial, prêt pour les premiers exercices
+
+Voir [docs/journal/](docs/journal/) pour le log détaillé d'entraînement.
 
 Le dossier `playground/` est reserve aux essais locaux et n'est pas versionne.
