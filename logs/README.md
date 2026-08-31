@@ -11,3 +11,11 @@ Format conseille :
 - Blocage / lecon :
 - Prochaine action :
 ```
+
+```text
+## 2026-08-31
+- Objectif : jour 1 de apprentissage C 
+- Travail realise :
+- Blocage / lecon :
+- Prochaine action :
+```
