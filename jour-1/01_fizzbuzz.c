@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 //FizzBuzz — Boucle et conditions
 
 //Écrire un programme en langage C qui affiche les nombres de 1 à 100.
@@ -16,3 +18,4 @@
 //Utiliser des conditions if / else if / else.
 //Utiliser l'opérateur % pour vérifier la divisibilité.
 // Ne pas écrire manuellement les 100 résultats.
+
