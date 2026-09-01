@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Conversion Celsius → Fahrenheit
 **
@@ -45,3 +47,13 @@
 ** décimaux et comprendre l'importance du type des variables
 ** dans une opération mathématique en C.
 */
+
+int main () {
+
+    float celsius = 25;
+    float F = celsius * 9 / 5 + 32;
+
+    printf("Temperature :%.2f\n", F);
+
+    return 0;
+};

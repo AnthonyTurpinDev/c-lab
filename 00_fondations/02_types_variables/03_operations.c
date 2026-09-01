@@ -1,3 +1,4 @@
+#include <stdio.h>
 /*
 ** EXERCICE : Les quatre opérations
 **
@@ -61,3 +62,20 @@
 ** Comprendre les quatre opérations arithmétiques de base
 ** et comprendre le fonctionnement de la division entière en C.
 */
+
+int main () {
+    int a = 20;
+    int b = 5;
+
+    int addition = a + b;
+    int soustration = a - b;
+    int multiplication = a * b;
+    int division = a / b;
+
+    printf("addition :%d\n", addition);
+    printf("soustration :%d\n", soustration);
+    printf(" multiplication:%d\n", multiplication);
+    printf("division :%d\n", division);
+
+    return 0;
+};

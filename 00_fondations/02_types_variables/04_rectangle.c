@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Aire d'un rectangle
 **
@@ -41,3 +43,16 @@
 ** Comprendre comment utiliser des variables dans un calcul
 ** et afficher le résultat obtenu.
 */
+
+int main () {
+
+    int longeur = 10;
+    int largeur = 5;
+    int air = 10 * 5;
+
+    printf("Longeur :%d\n", longeur);
+    printf("largeur :%d\n", largeur);
+    printf("air :%d\n", air);
+
+    return 0; 
+};

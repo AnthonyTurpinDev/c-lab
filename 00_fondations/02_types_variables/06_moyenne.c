@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Moyenne de trois nombres
 **
@@ -51,3 +53,15 @@
 ** Comprendre pourquoi le choix du type de variable est important
 ** lorsqu'un calcul peut produire un résultat décimal.
 */
+
+int main () {
+
+    int x = 12;
+    int y = 15;
+    int z = 17;
+
+    float moyenne = (x + y +z) / 3.0;
+
+    printf("moyenne :%.2f\n", moyenne);
+
+};

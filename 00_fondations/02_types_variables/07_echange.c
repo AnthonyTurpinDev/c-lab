@@ -1,3 +1,4 @@
+#include <stdio.h>
 /*
 ** EXERCICE : Échanger deux variables
 **
@@ -59,3 +60,15 @@
 ** Essayer de refaire l'exercice sans regarder ton premier code.
 ** Puis expliquer sur papier les différentes étapes de l'échange.
 */
+
+int main () {
+
+    int a = 10;
+    int b = 20;
+    int temporaire;
+
+    temporaire = a;
+    a = b;
+    b = temporaire;
+    printf("a = %d, b = %d\n", a, b);
+};

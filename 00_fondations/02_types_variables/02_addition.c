@@ -1,3 +1,4 @@
+#include <stdio.h>
 /*
 ** EXERCICE : Additionner deux variables
 **
@@ -34,3 +35,12 @@
 ** Comprendre comment effectuer une opération entre deux
 ** variables et stocker le résultat dans une autre variable.
 */
+
+int main () {
+    int a = 15;
+    int b = 27;
+    int c = a + b;
+
+    printf("%d + %d = %d\n", a, b, c);
+    return 0;
+};

@@ -1,3 +1,4 @@
+#include <stdio.h>
 /*
 ** EXERCICE : Déclaration et affichage de variables
 **
@@ -43,3 +44,14 @@
 ** Être capable de déclarer, initialiser et afficher
 ** correctement des variables en langage C.
 */
+
+int main() {
+   int age = 20;
+   float taille = 1.72;
+   char initiale = 'A';
+
+   printf("Age :%d\n", age);
+   printf("Taille :%.2f\n", taille);
+   printf("Initiale : %c\n", initiale);
+   return 0;
+};
