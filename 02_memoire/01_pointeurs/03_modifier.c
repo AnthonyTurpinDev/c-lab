@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Modifier avec un pointeur
 **
@@ -63,3 +65,13 @@
 ** Si p contient l'adresse de x, que modifies-tu
 ** réellement lorsque tu écris *p = 50 ?
 */
+
+int main () {
+
+    int x = 10;
+    int *p = x;
+    int p = 50; 
+
+    printf("x =: %p\n", p);
+
+};

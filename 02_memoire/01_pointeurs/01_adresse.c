@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 
 /*
 ** EXERCICE : Première adresse
@@ -50,3 +50,14 @@
 **
 ** Que représente exactement &x ?
 */
+
+int main () {
+
+    int x = 42;
+    int *p = &x;
+
+    printf("La valeur de x:%d\n", x);
+    printf("L'adresse mémoire de x.:%p\n", p);
+
+    return 0;
+};

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Créer un pointeur
 **
@@ -65,3 +67,15 @@
 **
 ** Si p contient l'adresse de x, que contient *p ?
 */
+int main(void)
+{
+    int x = 42;
+    int *p = &x;
+
+    printf("Valeur de x: %d\n", x);
+    printf("Adresse de x : %p\n", &x);
+    printf("Valeur de p: %p\n", p);
+    printf("Valeur pointée par p: %d\n", *p);
+
+    return 0;
+}

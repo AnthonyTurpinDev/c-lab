@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Prédire avant d'exécuter
 **
@@ -56,3 +58,13 @@
 ** valeur alors que nous avons modifié *p et non x
 ** directement ?
 */
+
+int main () {
+     int x = 10;
+     int *p = &x;
+
+     *p = 20;
+
+     printf("%d\n", x);
+     return 0;
+};
