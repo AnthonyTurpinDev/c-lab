@@ -19,3 +19,12 @@ Format conseille :
 - Blocage / lecon :
 - Prochaine action :
 ```
+
+```text
+## 2026-09-02
+- Objectif : jour 1 de apprentissage C 
+- Travail realise : faire 12 exo pointeur 
+- Blocage / lecon : syntaxte / pointeur
+- Prochaine action : contier a faire les exo + finir les exo de base 
+```
+

@@ -6,129 +6,273 @@ Liste des erreurs qui reviennent plus d'une fois. À consulter avant de demander
 
 ## Pointeurs
 
-### Confusion `*p++` vs `(*p)++`
+### Confondre une valeur et une adresse
 
-**Erreur** : Penser que `*p++` incrémente la valeur pointée
-**Réalité** : `*p++` incrémente le pointeur lui-même (équivalent à `*(p++)`)
-**Correction** : Utiliser `(*p)++` pour incrémenter la valeur pointée
+**Erreur** : Penser que `x` et `&x` représentent la même chose.
+
+**Réalité** :
+
+```text
+x  → valeur de la variable
+&x → adresse mémoire de la variable
+```
+
+**Correction** : Toujours identifier si je travaille avec la valeur ou avec l'adresse.
+
+```c
+int x = 25;
+
+printf("%d\n", x);          // valeur
+printf("%p\n", (void *)&x); // adresse
+```
+
+**Réflexe** :
+
+> `&` → je récupère une adresse.
+
+---
+
+### Confondre `p` et `*p`
+
+**Erreur** : Penser que le pointeur contient directement la valeur.
+
+**Réalité** :
+
+```text
+p  → contient une adresse
+*p → récupère la valeur située à cette adresse
+```
+
+**Correction** :
+
+```c
+int x = 25;
+int *p = &x;
+
+printf("%p\n", (void *)p); // adresse
+printf("%d\n", *p);        // valeur
+```
+
+**Réflexe** :
+
+> `p` = adresse
+> `*p` = valeur à cette adresse
+
+---
+
+### Oublier `&` lors du passage d'une variable à une fonction
+
+**Erreur** : Envoyer `x` alors que la fonction attend un pointeur.
+
+```c
+void double_value(int *n)
+{
+    *n = *n * 2;
+}
+
+int main(void)
+{
+    int x = 25;
+
+    double_value(x); // FAUX
+}
+```
+
+**Réalité** : La fonction attend une adresse (`int *`).
+
+**Correction** :
+
+```c
+double_value(&x);
+```
+
+**Réflexe** :
+
+> Si la fonction attend `int *`, je dois généralement lui transmettre une adresse avec `&`.
+
+---
+
+### Oublier `*` dans une fonction qui reçoit une adresse
+
+**Erreur** : Déclarer le paramètre comme une variable normale alors que je veux recevoir une adresse.
 
 ```c
 // FAUX
-int *p = &x;
-*p++;  // incrémente p, pas x !
-
-// BON
-int *p = &x;
-(*p)++;  // incrémente x
+void double_value(int n)
+{
+    *n = *n * 2;
+}
 ```
 
----
-
-## Allocation mémoire
-
-### Oublier de vérifier le retour de `malloc`
+**Correction** :
 
 ```c
-// FAUX — si malloc échoue, ptr est NULL et le reste du code plante
-int *ptr = malloc(sizeof(int) * 10);
-ptr[0] = 42;
-
-// BON
-int *ptr = malloc(sizeof(int) * 10);
-if (ptr == NULL) {
-    printf("Erreur: malloc a échoué\n");
-    return (1);
+void double_value(int *n)
+{
+    *n = *n * 2;
 }
-ptr[0] = 42;
 ```
 
-### Fuites mémoire (oublier `free`)
+**Réalité** : `int *n` indique que `n` est un pointeur vers un `int`.
+
+**Réflexe** :
+
+> Si ma fonction doit travailler avec l'adresse d'un `int`, le paramètre doit être `int *`.
+
+---
+
+### Faire un calcul sur l'adresse au lieu de la valeur
+
+**Erreur** :
 
 ```c
-// FAUX — mémoire non libérée
-void func(void) {
-    int *ptr = malloc(10);
-    printf("%d\n", *ptr);
-}  // ptr n'est jamais freed !
-
-// BON
-void func(void) {
-    int *ptr = malloc(10);
-    printf("%d\n", *ptr);
-    free(ptr);
+void double_value(int *n)
+{
+    *n = n * 2;
 }
 ```
 
----
+**Réalité** :
 
-## Boucles
+```text
+n  → adresse
+*n → valeur
+```
 
-### `j` ne se réinitialise pas dans les boucles imbriquées
+Je veux multiplier la valeur, pas l'adresse.
+
+**Correction** :
 
 ```c
-// FAUX — j ne revient pas à 0 à chaque ligne
-for (int i = 0; i < 5; i++) {
-    for (int j = i; j < 5; j++) {  // j part de i, pas 0 !
-        printf("*");
-    }
-    printf("\n");
-}
-
-// BON
-for (int i = 0; i < 5; i++) {
-    for (int j = 0; j < i; j++) {  // j se reset bien à 0
-        printf("*");
-    }
-    printf("\n");
+void double_value(int *n)
+{
+    *n = *n * 2;
 }
 ```
 
----
+**Réflexe** :
 
-## Compilation
-
-### `-Wall -Wextra` non activés
-
-Toujours compiler avec :
-```bash
-gcc -Wall -Wextra -Werror mon_prog.c -o mon_prog
-```
-
-Ignorer les warnings c'est laisser passer des bugs. Activé `-Werror` pour les forcer à disparaître.
+> Avant un calcul, vérifier si je travaille avec `n` ou `*n`.
 
 ---
 
-## Git
+### Confondre `&` et `*`
 
-### Commits vagues ("update", "fix")
+**Erreur** : Utiliser `&` et `*` au hasard parce que leur rôle n'est pas encore automatique.
 
-Mauvais message :
-```
-commit a1b2c3d
-Author: moi
-Date:   2026-08-30
-    update
-```
+**Réalité** :
 
-Bon message :
-```
-commit a1b2c3d
-Author: moi
-Date:   2026-08-30
-    feat(pointeurs): exercice inversion tableau
+```text
+&x → adresse de x
+*p → valeur située à l'adresse contenue dans p
 ```
 
-Le log Git est ton journal de travail. Des messages clairs c'est utile dans 6 mois.
+**Réflexe** :
+
+```text
+& → aller chercher l'adresse
+
+* → aller chercher la valeur à cette adresse
+```
 
 ---
 
-## À ajouter
+## Fonctions
 
-D'autres erreurs fréquentes seront ajoutées au fil du temps, au fur et à mesure qu'elles se répètent.
+### Ne pas suivre correctement le chemin de la donnée
 
-Une erreur n'est ajoutee ici que si elle revient plusieurs fois.
+**Erreur** : Se perdre entre `main`, la fonction et le pointeur.
 
-| Erreur | Pourquoi elle arrive | Reflexe a prendre |
-| --- | --- | --- |
-| Oublier de verifier `malloc` | On suppose que la memoire est toujours disponible | Tester le retour avant toute dereference |
-| Confondre `*p++` et `(*p)++` | Priorite des operateurs mal memorisee | Ajouter les parentheses et lire l'expression pas a pas |
+Exemple :
+
+```c
+int x = 25;
+
+double_value(&x);
+```
+
+Puis :
+
+```c
+void double_value(int *n)
+{
+    *n = *n * 2;
+}
+```
+
+**Réalité** :
+
+```text
+main
+ ↓
+&x
+ ↓
+adresse de x
+ ↓
+n reçoit cette adresse
+ ↓
+*n permet d'accéder à x
+ ↓
+x est modifié
+```
+
+**Réflexe** :
+
+Toujours suivre le chemin :
+
+```text
+VARIABLE
+   ↓
+ADRESSE
+   ↓
+POINTEUR
+   ↓
+VALEUR
+```
+
+---
+
+# 📋 Tableau des erreurs à surveiller
+
+| Erreur                                  | Pourquoi elle arrive                                         | Réflexe à prendre                                       |
+| --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| Confondre `x` et `&x`                   | Valeur et adresse ne sont pas encore automatiques            | `x = valeur`, `&x = adresse`                            |
+| Confondre `p` et `*p`                   | Je mélange le pointeur et la valeur pointée                  | `p = adresse`, `*p = valeur`                            |
+| Oublier `&` dans un appel de fonction   | J'oublie que la fonction attend une adresse                  | Vérifier le type du paramètre                           |
+| Oublier `*` dans `int *p`               | Syntaxe encore fragile                                       | Si je manipule une adresse d'un `int`, utiliser `int *` |
+| Faire un calcul sur `p` au lieu de `*p` | Confusion entre adresse et valeur                            | Faire le calcul sur `*p`                                |
+| Confondre `&` et `*`                    | Rôle des opérateurs encore fragile                           | `&` → adresse, `*` → valeur                             |
+| Se perdre entre plusieurs fonctions     | Je ne suis pas encore automatique sur le chemin de la donnée | Suivre `variable → adresse → pointeur → valeur`         |
+
+---
+
+# 🧠 Réflexe avant de demander de l'aide
+
+Avant de demander de l'aide sur un exercice avec des pointeurs, je dois vérifier :
+
+```text
+[ ] Est-ce que je veux une valeur ou une adresse ?
+[ ] Est-ce que j'ai utilisé & au bon endroit ?
+[ ] Est-ce que j'ai utilisé * au bon endroit ?
+[ ] Est-ce que mon paramètre est bien un pointeur ?
+[ ] Est-ce que je fais mon calcul sur la valeur ou sur l'adresse ?
+[ ] Est-ce que je peux suivre le chemin de la variable jusqu'à la fonction ?
+```
+
+---
+
+## ⚠️ Règle du fichier
+
+Une erreur n'est ajoutée dans ce fichier que si elle **revient plusieurs fois** ou si elle devient un piège important dans mes exercices.
+
+Le but n'est pas de lister toutes mes erreurs.
+
+Le but est de construire progressivement une liste de mes **vrais pièges récurrents**.
+
+---
+
+## 🎯 Objectif
+
+Avec le temps, cette liste doit devenir un réflexe :
+
+> **Avant de demander de l'aide, je consulte mes erreurs fréquentes et je vérifie si je suis déjà tombé dans ce piège.**
