@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Swap
 **
@@ -81,3 +83,21 @@
 ** Pourquoi la deuxième version permet-elle
 ** de modifier les variables originales ?
 */
+
+void swap(int *a, int *b) {
+
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+
+}
+int main () {
+
+    int a = 10;
+    int b = 20;
+
+    swap(&a, &b);
+
+    printf("a = %d\n", a);
+    printf("b =%d\n", b);
+}

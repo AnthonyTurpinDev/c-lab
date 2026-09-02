@@ -1,3 +1,5 @@
+#include <stdio.h>>
+
 /*
 ** EXERCICE : Modifier deux variables
 **
@@ -54,3 +56,17 @@
 **     *p_b = 200;
 **
 */
+int main () {
+
+     int a = 10;
+     int b = 20;
+     int *p = &a;
+     int *q = &b;
+     *p = 100;
+     *q = 200;
+
+     printf("a = %d\n", a);
+     printf("b = %d\n", b);
+
+     return 0;
+};

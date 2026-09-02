@@ -69,9 +69,9 @@
 int main () {
 
     int x = 10;
-    int *p = x;
-    int p = 50; 
+    int *p = &x;
+    *p = 50;
 
-    printf("x =: %p\n", p);
+    printf("x = %d\n", x);
 
 };

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Doubler une valeur
 **
@@ -50,3 +52,17 @@
 ** Si n contient l'adresse de x, comment peux-tu
 ** accéder à la valeur de x pour la multiplier par 2 ?
 */
+
+void double_value(int *n) {
+
+    *n = *n* 2;
+}
+int main () {
+    int x = 25;
+
+    double_value(&x);
+
+    printf("x = %d\n", x);
+
+    return 0;
+};

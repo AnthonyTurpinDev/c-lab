@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Incrémenter
 **
@@ -67,3 +69,31 @@
 ** Si n contient l'adresse de x, que se passe-t-il
 ** lorsque tu modifies *n de 1 ?
 */
+
+void increment(int *n) {
+
+     *n = *n + 1;
+
+     printf("x =%d\n", *n);
+
+     *n = *n + 1;
+
+     printf("x =%d\n", *n);
+
+     *n = *n + 1;
+
+     printf("x =%d\n", *n);
+
+     *n = *n + 1;
+
+     printf("x =%d\n", *n);
+
+}
+
+int main () {
+    int x = 10;
+
+    increment(&x);
+
+    return 0;
+}

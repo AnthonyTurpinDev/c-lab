@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Adresse et valeur
 **
@@ -77,3 +79,17 @@
 **
 ** Comment obtenir cette adresse ?
 */
+
+int main () {
+
+    int x = 25;
+    int *p = &x;
+
+    printf("Valeur de x :%d\n", x);
+    printf("Adresse de x :%p\n", (void*)&x);
+    printf("Valeur de p :%p\n", (void*)p);
+    printf("Adresse de p :%p\n", (void*)&p);
+    printf("Valeur pointée par p :%d\n", *p);
+
+    return 0;
+};

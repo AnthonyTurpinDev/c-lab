@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Modifier une variable avec une fonction
 **
@@ -54,3 +56,18 @@
 ** Pourquoi la fonction modify() peut-elle modifier x
 ** alors qu'elle ne reçoit pas directement la valeur de x ?
 */
+void modify(int *n)
+{
+    *n = 100;
+}
+
+int main(void)
+{
+    int x = 10;
+
+    modify(&x);
+
+    printf("x = %d\n", x);
+
+    return 0;
+}

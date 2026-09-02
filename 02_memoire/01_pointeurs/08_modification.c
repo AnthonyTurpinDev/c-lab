@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Modifier plusieurs fois
 **
@@ -52,3 +54,24 @@
 ** Pourquoi p continue-t-il à modifier x après
 ** plusieurs changements de valeur ?
 */
+
+int main () {
+
+     int x = 10;
+     int *p = &x;
+
+     *p = 20;
+     printf("%d\n", x);
+
+     *p = 50;
+     printf("%d\n", x);
+
+     *p = 100;
+     printf("%d\n", x);
+
+     *p = 0;
+     printf("%d\n", x);
+
+
+
+};

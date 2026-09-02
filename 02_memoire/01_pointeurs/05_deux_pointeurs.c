@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Deux variables
 **
@@ -57,3 +59,18 @@
 **
 ** Quelle valeur obtiens-tu pour chacun ?
 */
+
+int main () {
+
+    int a = 10;
+    int b = 20;
+    int *p = &a;
+    int *q = &b;
+
+    printf("a = %d\n",a);
+    printf("b = %d\n",b);
+    printf("pointeur a:%p\n",p);
+    printf("pointeur b:%p\n",q);
+
+    return 0;
+};
