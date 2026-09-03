@@ -31,9 +31,9 @@ Format conseille :
 ```text
 ## 2026-09-03
 - Objectif : jour 2 ajout exo sur tout les notion + esseyer de faire les exo de base  
-- Travail realise : 
+- Travail realise : ajout des exo 
 - Blocage / lecon : 
-- Prochaine action : 
+- Prochaine action : enchainer les exo 
 ```
 
 
