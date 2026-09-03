@@ -28,3 +28,13 @@ Format conseille :
 - Prochaine action : contier a faire les exo + finir les exo de base 
 ```
 
+```text
+## 2026-09-03
+- Objectif : jour 2 ajout exo sur tout les notion + esseyer de faire les exo de base  
+- Travail realise : 
+- Blocage / lecon : 
+- Prochaine action : 
+```
+
+
+
