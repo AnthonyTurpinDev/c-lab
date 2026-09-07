@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Hello
 **
@@ -57,3 +59,15 @@
 ** Essaie d'abord de construire seul la fonction
 ** et son appel dans main().
 */
+
+void hello(void)
+{
+    printf("Hello !\n");
+}
+
+int main(void)
+{
+    hello();
+
+    return 0;
+};

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Vérifier si un nombre est positif
 **
@@ -29,3 +31,23 @@
 ** S'entraîner à utiliser les conditions et les opérateurs
 ** de comparaison en C.
 */
+
+int main () {
+
+    int i = 10;
+
+    if (i > 0)
+    {
+        printf("Le nombre est positif %d\n", i);
+    }
+    else
+    {
+        printf("Le nombre n'est pas positif. %d\n", i);
+    }
+    
+    return 0;
+    
+    
+
+};
+

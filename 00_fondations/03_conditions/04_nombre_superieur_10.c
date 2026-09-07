@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Vérifier si un nombre est supérieur à 10
 **
@@ -29,3 +31,22 @@
 ** S'entraîner à utiliser les conditions et les opérateurs
 ** de comparaison en C.
 */
+
+int main () {
+
+    int i = 11;
+
+    if (i >= 10)
+    {
+        printf(" Le nombre est superieur a 10. %d\n", i);
+    }
+    else
+    {
+        printf("Le nombre n'est pas superieur a 10. %d\n", i);
+    }
+    
+    return 0;
+    
+    
+
+};

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Vérifier si un nombre est pair
 **
@@ -29,3 +31,22 @@
 ** S'entraîner à utiliser l'opérateur modulo %
 ** et les conditions en C.
 */
+
+int main () {
+
+    int i = 9;
+
+    if (i % 2 == 0)
+    {
+        printf("pair %d\n", i);
+    }
+    else
+    {
+        printf("impaire %d\n", i);
+    }
+    
+    return 0;
+    
+    
+
+};

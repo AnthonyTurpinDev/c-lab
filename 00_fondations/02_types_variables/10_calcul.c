@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Mini calculateur
 **
@@ -84,3 +86,23 @@
 ** de base en C et comprendre la différence entre division (/)
 ** et modulo (%).
 */
+int main () {
+
+    int a = 15;
+    int b = 4;
+
+    int addition = a + b;
+    int sousstraction = a - b; 
+    int multiplication = a * b;
+    float division = a / b;
+    float quotin = a % b; 
+
+    printf("15 + 4 =%d\n", addition);
+    printf("15 - 4 =%d\n", sousstraction);
+    printf("15 * 4 =%d\n", multiplication);
+    printf("15 / 4 =%.2f\n", division);
+    printf("15 %% 4 =%.2f\n", quotin);
+
+    return 0;
+    
+};

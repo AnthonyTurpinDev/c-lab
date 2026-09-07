@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Compte à rebours
 **
@@ -77,3 +79,14 @@
 **
 ** à chaque tour ?
 */
+
+int main(void) {
+
+    int compteur = 20;
+    while (compteur >= 0)
+    {
+        printf("%d\n", compteur);
+        compteur--;
+    }
+    
+};

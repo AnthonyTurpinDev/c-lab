@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Déterminer une mention selon une note
 **
@@ -43,3 +45,35 @@
 ** S'entraîner à utiliser plusieurs conditions successives
 ** et à définir des intervalles de valeurs en C.
 */
+
+int main(void)
+{
+    int a = 11;
+
+    if (a < 0 || a > 20)
+    {
+        printf("Note invalide\n");
+    }
+    else if (a < 10)
+    {
+        printf("Ajourné %d\n", a);
+    }
+    else if (a < 12)
+    {
+        printf("Passable %d\n", a);
+    }
+    else if (a < 14)
+    {
+        printf("Assez bien %d\n", a);
+    }
+    else if (a < 16)
+    {
+        printf("Bien %d\n", a);
+    }
+    else
+    {
+        printf("Très bien %d\n", a);
+    }
+
+    return 0;
+}

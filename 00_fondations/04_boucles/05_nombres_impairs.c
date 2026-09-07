@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Nombres impairs
 **
@@ -73,3 +75,16 @@
 **
 ** par combien dois-tu faire évoluer i à chaque tour ?
 */
+
+
+int main (void) {
+    int a = 1;
+    while (a % 2 == 1 && a <= 20)
+    {
+        printf("nombre impair :%d\n", a);
+        a += 2;
+    }
+    
+};
+
+

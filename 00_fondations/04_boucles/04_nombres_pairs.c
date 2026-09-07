@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Nombres pairs
 **
@@ -73,3 +75,14 @@
 ** Si i commence à 0 et augmente de 2 à chaque tour,
 ** quelles seront ses valeurs successives ?
 */
+
+
+int main (void) {
+    int a = 0;
+    while (a % 2 == 0 && a <= 20)
+    {
+        printf("nombre pair :%d\n", a);
+        a += 2;
+    }
+    
+};

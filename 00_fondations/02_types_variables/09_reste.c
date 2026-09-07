@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Quotient et reste
 **
@@ -70,3 +72,19 @@
 ** Comprendre parfaitement la différence entre / et %
 ** lors d'une division entière en C.
 */
+
+int main () {
+
+    int a = 37;
+    int b = 5;
+
+    int Q = a % b;
+    int D = a / b;
+
+    printf("Quotient :%d\n", Q);
+    printf("Reste :%d\n", D);
+
+    return 0;
+
+};
+

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Convertisseur de secondes
 **
@@ -81,3 +83,18 @@
 ** car ces deux opérateurs seront très utilisés dans les exercices
 ** de programmation en C.
 */
+
+int main () {
+    int secondes = 7384;
+    int minutes = secondes / 60;
+    int heures = minutes / 60; 
+
+    printf("%d\n heures", heures);
+
+    printf("%d\n minute", minutes);
+    
+    printf("%d\n seconde", secondes);
+
+    return 0; 
+
+};

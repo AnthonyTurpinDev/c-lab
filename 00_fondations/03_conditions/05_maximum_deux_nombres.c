@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Maximum de deux nombres
 **
@@ -29,3 +31,28 @@
 ** S'entraîner à comparer plusieurs valeurs et à utiliser
 ** les conditions en C.
 */
+
+
+int main () {
+
+    int a = 11;
+    int b = 8;
+
+    if (a >= b)
+    {
+        printf(" Le nombre superieur est %d\n", a);
+    }
+    else if (b <= a)
+    {
+        printf("Le nombre superieur est %d\n", b);
+    }
+    else
+    {
+        printf("Les deux nombres sont égaux. %d\n");
+    }
+    
+    return 0;
+    
+    
+
+};

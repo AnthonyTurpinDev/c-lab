@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Compter de 0 à 20
 **
@@ -80,3 +82,14 @@
 ** Quelle condition permet d'afficher 20,
 ** mais empêche ensuite la boucle de continuer ?
 */
+
+int main(void) {
+
+    int compteur = 0;
+    while (compteur < 20)
+    {
+        printf("%d\n", compteur);
+        compteur++;
+    }
+    
+};

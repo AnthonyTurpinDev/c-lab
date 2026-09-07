@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Compter de 1 à 10
 **
@@ -64,3 +66,14 @@
 ** Que doit contenir i après l'affichage de 10
 ** pour que la boucle puisse s'arrêter ?
 */
+
+int main(void) {
+
+    int compteur = 0;
+    while (compteur < 10)
+    {
+        printf("%d\n", compteur);
+        compteur++;
+    }
+    
+};

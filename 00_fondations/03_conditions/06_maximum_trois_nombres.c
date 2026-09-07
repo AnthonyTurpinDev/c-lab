@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Maximum de trois nombres
 **
@@ -33,3 +35,38 @@
 ** S'entraîner à comparer plusieurs valeurs et à combiner
 ** plusieurs conditions en C.
 */
+
+
+int maximum(int a, int b, int c)
+{
+    int max;
+
+    if (a >= b && a >= c)
+    {
+        max = a;
+    }
+    else if (b >= a && b >= c)
+    {
+        max = b;
+    }
+    else
+    {
+        max = c;
+    }
+
+    return max;
+}
+
+int main(void)
+{
+    int a = 11;
+    int b = 8;
+    int c = 15;
+    int max;
+
+    max = maximum(a, b, c);
+
+    printf("Le maximum est %d\n", max);
+
+    return 0;
+}
