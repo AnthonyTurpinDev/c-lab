@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Doubler un nombre
 **
@@ -78,3 +80,20 @@
 **
 ** La fonction doit RETOURNER le résultat.
 */
+
+
+int double_number(int n) {
+
+    printf("%d\n", n * 2);
+    return n * 2;
+
+};
+
+int main (void) {
+
+    int a = 5;
+    int n = a * 2;
+
+    double_number(n);
+    return 0;
+};

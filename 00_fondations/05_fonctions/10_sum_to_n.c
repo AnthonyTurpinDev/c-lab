@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Somme jusqu'à N
 **
@@ -94,3 +96,29 @@
 ** - Comprendre qu'une fonction peut effectuer
 **   plusieurs calculs avant de retourner une valeur.
 */
+
+
+
+ int sum_to_n(int n)
+{
+    int compteur = 1;
+    int somme = 0;
+
+    while (compteur <= n)
+    {
+        somme = somme + compteur;
+        compteur++;
+    }
+
+    return somme;
+}
+
+
+int main (void) {
+
+     int n = 10;
+
+    printf("%d\n", sum_to_n(n));
+    return 0;
+
+};

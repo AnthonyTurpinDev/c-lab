@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Afficher un message
 **
@@ -40,3 +42,14 @@
 ** - Mettre plusieurs instructions dans une fonction.
 ** - Appeler la fonction depuis main().
 */
+
+void print_message(void) {
+
+    printf("Bonjour, je commence le c !");
+};
+
+int main (void) {
+
+    print_message();
+    return 0;
+};

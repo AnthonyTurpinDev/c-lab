@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Afficher un nombre
 **
@@ -63,3 +65,15 @@
 ** - Appeler plusieurs fois une même fonction avec
 **   des valeurs différentes.
 */
+
+void print_number(int n) {
+
+    printf("%d\n", n);
+};
+
+int main (void) {
+
+    int n = 42;
+    print_number(n);
+    return 0;
+};

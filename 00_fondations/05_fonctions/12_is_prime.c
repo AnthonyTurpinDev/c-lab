@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Is Prime
 **
@@ -113,3 +115,35 @@
 ** Réfléchis à la limite maximale réellement nécessaire
 ** pour rechercher un diviseur.
 */
+
+int is_prime(int n)
+{
+    if (n <= 1)
+    {
+        return 0;
+    }
+
+    int compteur = 2;
+
+    while (compteur < n)
+    {
+        if (n % compteur == 0)
+        {
+            return 0;
+        }
+
+        compteur++;
+    }
+
+    return 1;
+}
+
+int main (void) {
+
+    int n = 3;
+
+    is_prime(n);
+
+    return 0;
+
+};

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Is Positive
 **
@@ -75,3 +77,28 @@
 ** - Comprendre qu'une fonction peut retourner une valeur
 **   qui sera ensuite utilisée dans main().
 */
+
+int is_positive(int n) {
+
+    if (n >= 0)
+    {
+        printf("positif : %d\n", n);
+    }
+    else
+    {
+        printf("negatif : %d\n", n);
+    }
+    
+
+    return n;
+    
+
+};
+
+int main (void) {
+
+    int n = -10;
+
+    is_positive(n);
+    return 0;
+};

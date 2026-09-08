@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Puissance
 **
@@ -108,3 +110,29 @@
 **
 ** et le rôle de chacun dans la boucle.
 */
+
+int my_compute_power_it(int nb, int p)
+{
+    int result = 1;
+
+    if (p < 0)
+        return (0);
+    if (p == 0)
+        return (1);
+    while (p > 0) {
+        result = result * nb;
+        p--;
+    }
+    return (result);
+}
+
+int main(void)
+{
+    printf("2^2  = %d (attendu : 4)\n", my_compute_power_it(2, 2));
+    printf("2^3  = %d (attendu : 8)\n", my_compute_power_it(2, 3));
+    printf("2^5  = %d (attendu : 32)\n", my_compute_power_it(2, 5));
+    printf("5^2  = %d (attendu : 25)\n", my_compute_power_it(5, 2));
+    printf("10^3 = %d (attendu : 1000)\n", my_compute_power_it(10, 3));
+    printf("5^0  = %d (attendu : 1)\n", my_compute_power_it(5, 0));
+    return (0);
+}

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Compter jusqu'à N
 **
@@ -81,3 +83,23 @@
 **   une boucle.
 ** - Appeler plusieurs fois la même fonction.
 */
+
+void count_to_n(int n) {
+
+    while (n > 0 )
+    {
+        printf("compte :%d\n", n);
+        n--;
+    }
+    
+
+};
+
+int main (void) {
+
+     int n = 10;
+
+    count_to_n(n);
+    return 0;
+
+};

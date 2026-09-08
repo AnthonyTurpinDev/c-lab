@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Is Even
 **
@@ -74,3 +76,29 @@
 **     15
 **     20
 */
+
+
+int is_even(int n) {
+
+    if (n % 2 == 0)
+    {
+        printf("pair :%d\n", n);
+    }
+    else
+    {
+        printf("impair :%d\n", n);
+    }
+    
+    return n; 
+
+};
+
+int main (void) {
+
+    int n = 10;
+
+    is_even(n);
+
+    return 0;
+
+};

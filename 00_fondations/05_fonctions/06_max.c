@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Maximum
 **
@@ -67,3 +69,27 @@
 **     max(-10, 3)
 **     max(-20, -5)
 */
+
+int max(int a, int b) {
+
+    if (a >= b)
+    {
+        printf("up %d\n", a);
+    }
+    else
+    {
+       printf("down %d\n", b);
+    }
+    
+    return (a >= b) ? a : b;
+
+};
+
+int main (void) {
+    
+    int a = 10;
+    int b = 5;
+
+    max(a , b);
+    return 0;
+};

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Addition
 **
@@ -59,3 +61,21 @@
 **
 ** Vérifie que les résultats sont corrects.
 */
+
+int add(int a, int b) {
+
+     a + b ;
+
+    printf("%d\n", a + b);
+    return a + b;
+};
+
+int main (void) {
+
+    int a = 5;
+    int b  = 5; 
+
+    add(a , b);
+    return 0; 
+
+};

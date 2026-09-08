@@ -145,3 +145,52 @@
 ** Tu dois être capable d'expliquer le rôle de chaque
 ** fonction et pourquoi count_even() utilise is_even().
 */
+
+/*
+** EPITECH PROJECT, 2026
+** 15_count_even
+** File description:
+** Counts even numbers from 0 to n using a helper function
+*/
+
+#include <stdio.h>
+
+/*
+** Verifie si un nombre est pair.
+** Retourne 1 si pair, 0 si impair.
+*/
+int is_even(int n)
+{
+    if (n % 2 == 0)
+        return (1);
+    return (0);
+}
+
+/*
+** Compte le nombre de pairs de 0 a n.
+** Utilise is_even() comme fonction auxiliaire.
+*/
+int count_even(int n)
+{
+    int i;
+    int count;
+
+    i = 0;
+    count = 0;
+    while (i <= n) {
+        if (is_even(i))
+            count++;
+        i++;
+    }
+    return (count);
+}
+
+int main(void)
+{
+    printf("count_even(0)  = %d (attendu: 1)\n", count_even(0));
+    printf("count_even(1)  = %d (attendu: 1)\n", count_even(1));
+    printf("count_even(5)  = %d (attendu: 3)\n", count_even(5));
+    printf("count_even(10) = %d (attendu: 6)\n", count_even(10));
+    printf("count_even(20) = %d (attendu: 11)\n", count_even(20));
+    return (0);
+}

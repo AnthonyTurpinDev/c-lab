@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Factorielle
 **
@@ -108,3 +110,29 @@
 ** - Comprendre la différence entre additionner
 **   et multiplier dans un accumulateur.
 */
+
+int factorial(int n)
+{
+    int compteur = 1;
+    int somme = 1;
+
+    while (compteur <= n)
+    {
+        somme = somme * compteur;
+        compteur++;
+    }
+
+    return somme;
+}
+
+
+int main (void) {
+
+     int n = 5;
+
+     
+
+    printf("%d\n", factorial(n));
+    return 0;
+
+};

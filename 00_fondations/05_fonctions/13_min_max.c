@@ -117,3 +117,43 @@
 **     *min → écrit dans la variable min de main()
 **     *max → écrit dans la variable max de main()
 */
+
+/*
+** EPITECH PROJECT, 2026
+** 13_min_max
+** File description:
+** Places minimum and maximum values into pointers
+*/
+
+#include <stdio.h>
+
+void min_max(int a, int b, int *min, int *max)
+{
+    if (a < b) {
+        *min = a;
+        *max = b;
+    } else {
+        *min = b;
+        *max = a;
+    }
+}
+
+int main(void)
+{
+    int val_min;
+    int val_max;
+
+    // Test 1 : a < b
+    min_max(10, 25, &val_min, &val_max);
+    printf("a = 10, b = 25 -> min = %d, max = %d\n", val_min, val_max);
+
+    // Test 2 : a > b
+    min_max(30, 12, &val_min, &val_max);
+    printf("a = 30, b = 12 -> min = %d, max = %d\n", val_min, val_max);
+
+    // Test 3 : a == b
+    min_max(5, 5, &val_min, &val_max);
+    printf("a = 5,  b = 5  -> min = %d, max = %d\n", val_min, val_max);
+
+    return (0);
+}
