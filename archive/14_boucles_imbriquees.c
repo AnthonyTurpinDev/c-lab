@@ -1,3 +1,5 @@
+
+
 /*
 ** EXERCICE : Boucles imbriquées
 **
@@ -103,3 +105,27 @@
 **
 ** Toujours avec deux boucles while.
 */
+
+
+#include <stdio.h>
+
+int main(void)
+{
+    int ligne = 1;
+
+    while (ligne <= 5)
+    {
+        int etoile = 1;
+
+        while (etoile <= ligne)
+        {
+            printf("*");
+            etoile++;
+        }
+
+        printf("\n");
+        ligne++;
+    }
+
+    return 0;
+}
