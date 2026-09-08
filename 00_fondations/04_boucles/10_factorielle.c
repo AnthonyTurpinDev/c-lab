@@ -64,3 +64,31 @@
 **
 ** Ton programme doit donc également fonctionner avec N = 0.
 */
+
+#include <stdio.h>
+
+int factorial(int n)
+{
+    int compteur = 1;
+    int somme = 1;
+
+    while (compteur <= n)
+    {
+        somme = somme * compteur;
+        compteur++;
+    }
+
+    return somme;
+}
+
+
+int main (void) {
+
+     int n = 5;
+
+     
+
+    printf("%d\n", factorial(n));
+    return 0;
+
+};

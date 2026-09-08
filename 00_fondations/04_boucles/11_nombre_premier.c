@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Nombre premier
 **
@@ -87,3 +89,34 @@
 ** Essaie ensuite d'optimiser ton programme pour éviter
 ** de tester inutilement trop de nombres.
 */
+int is_prime(int n)
+{
+    if (n <= 1)
+    {
+        return 0;
+    }
+
+    int compteur = 2;
+
+    while (compteur < n)
+    {
+        if (n % compteur == 0)
+        {
+            return 0;
+        }
+
+        compteur++;
+    }
+
+    return 1;
+}
+
+int main (void) {
+
+    int n = 3;
+
+    is_prime(n);
+
+    return 0;
+
+};

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Compter les chiffres
 **
@@ -80,3 +82,21 @@
 **
 **     -123 → 3 chiffres
 */
+
+int main(void)
+{
+    int nombre;
+    int compteur = 0;
+
+    scanf("%d", &nombre);
+
+    while (nombre != 0)
+    {
+        nombre = nombre / 10;
+        compteur = compteur + 1;
+    }
+
+    printf("%d\n", compteur);
+
+    return 0;
+}
