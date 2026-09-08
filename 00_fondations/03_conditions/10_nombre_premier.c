@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Nombre premier
 **
@@ -47,3 +49,34 @@
 ** S'entraîner à utiliser les boucles, le modulo et les conditions
 ** pour résoudre un problème mathématique simple.
 */
+int is_prime(int n)
+{
+    if (n <= 1)
+    {
+        return 0;
+    }
+
+    int compteur = 2;
+
+    while (compteur < n)
+    {
+        if (n % compteur == 0)
+        {
+            return 0;
+        }
+
+        compteur++;
+    }
+
+    return 1;
+}
+
+int main (void) {
+
+    int n = 3;
+
+    is_prime(n);
+
+    return 0;
+
+};

@@ -1,3 +1,5 @@
+
+
 /*
 ** EXERCICE : Vérifier plusieurs conditions simultanément
 **
@@ -48,3 +50,52 @@
 ** S'entraîner à combiner plusieurs conditions avec les
 ** opérateurs logiques en C.
 */
+
+#include <stdio.h>
+
+void tri(int number)
+{
+    if (number >= 0)
+    {
+        printf("Le nombre est positif.\n");
+    }
+    else
+    {
+        printf("Le nombre n'est pas positif.\n");
+    }
+}
+
+void pair(int number)
+{
+    if (number % 2 == 0)
+    {
+        printf("Le nombre est pair.\n");
+    }
+    else
+    {
+        printf("Le nombre est impair.\n");
+    }
+}
+
+void supp(int number)
+{
+    if (number > 10)
+    {
+        printf("Le nombre est supérieur à 10.\n");
+    }
+    else
+    {
+        printf("Le nombre n'est pas supérieur à 10.\n");
+    }
+}
+
+int main(void)
+{
+    int number = 24;
+
+    tri(number);
+    pair(number);
+    supp(number);
+
+    return 0;
+}

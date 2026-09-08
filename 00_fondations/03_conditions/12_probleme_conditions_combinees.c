@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Conditions combinées — Problème inédit
 **
@@ -71,3 +73,52 @@
 ** 4. Écrire le code.
 ** 5. Tester plusieurs valeurs.
 */
+
+int tri(int a) 
+{
+    if (a > 0)
+    {
+        printf("positif\n");
+    }
+    else if (a < 0)
+    {
+        printf("negative\n");
+    }
+     else if (a % 2 == 0)
+    {
+       printf("pair\n");
+    }
+     else if (a % 2 != 0 )
+    {
+        printf("impaire \n");
+    }
+     else if (a == 0)
+    {
+        printf("zero\n");
+    }
+     else if (a >= 0 && a % 2 == 0)
+    {
+        printf("Positif et pair\n");
+    }
+      else if (a > 0 && a % 2 != 0 && a < 10)
+    {
+        printf("Positif, impair et inférieur à 10\n");
+    }
+    else if (a > 0 && a % 2 != 0 && a > 10)
+    {
+        printf("Positif, impair et inférieur à 10\n");
+    }
+
+    return a;
+    
+};
+
+int main (void) {
+
+    int a = 10;
+
+    tri(a);
+
+    return 0;
+
+};

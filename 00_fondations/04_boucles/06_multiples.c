@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Multiples de 3
 **
@@ -63,3 +65,17 @@
 **
 ** de combien dois-tu augmenter i à chaque tour ?
 */
+
+
+int main(void)
+{
+    int i;
+
+    i = 0;
+    while (i <= 30) {
+        printf("%d\n", i);
+        i = i + 3; // ou i += 3;
+    }
+
+    return (0);
+}

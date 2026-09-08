@@ -39,3 +39,24 @@
 ** S'entraîner à combiner plusieurs conditions logiques
 ** et à utiliser l'opérateur modulo %.
 */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int annee;
+
+    printf("Entrez une annee : ");
+    scanf("%d", &annee);
+
+    if (annee % 400 == 0 || (annee % 4 == 0 && annee % 100 != 0))
+    {
+        printf("L'annee est bissextile.\n");
+    }
+    else
+    {
+        printf("L'annee n'est pas bissextile.\n");
+    }
+
+    return 0;
+}

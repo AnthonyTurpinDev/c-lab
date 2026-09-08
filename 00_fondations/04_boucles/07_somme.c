@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Somme de 1 à N
 **
@@ -96,3 +98,27 @@
 ** Pourquoi faut-il initialiser somme à 0
 ** avant de commencer la boucle ?
 */
+
+ int sum_to_n(int n)
+{
+    int compteur = 1;
+    int somme = 0;
+
+    while (compteur <= n)
+    {
+        somme = somme + compteur;
+        compteur++;
+    }
+
+    return somme;
+}
+
+
+int main (void) {
+
+     int n = 10;
+
+    printf("%d\n", sum_to_n(n));
+    return 0;
+
+};

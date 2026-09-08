@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Maximum d'un tableau
 **
@@ -38,3 +40,23 @@
 ** S'entraîner à parcourir un tableau et à rechercher
 ** une valeur selon une condition.
 */
+int main(void) {
+    int tab[] = {12, 5, 27, 8, 19};
+int max;
+int i;
+
+max = tab[0];
+i = 1;
+
+while (i < 5)
+{
+    if (tab[i] > max)
+    {
+        max = tab[i];
+    }
+
+    i++;
+}
+
+printf("Le maximum est %d\n", max);
+};

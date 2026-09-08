@@ -93,3 +93,33 @@
 **
 ** que peux-tu en déduire sur i ?
 */
+
+#include <stdio.h>
+
+void Calcul(int N, int D)
+{
+    int i = 1;
+    int compteur = 0;
+
+    while (i <= N)
+    {
+        if (i % D == 0)
+        {
+            compteur++;
+        }
+
+        i++;
+    }
+
+    printf("Il y a %d nombres divisibles par %d.\n", compteur, D);
+}
+
+int main(void)
+{
+    int N = 20;
+    int D = 3;
+
+    Calcul(N, D);
+
+    return 0;
+}
