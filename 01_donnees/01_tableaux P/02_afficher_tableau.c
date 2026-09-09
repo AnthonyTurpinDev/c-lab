@@ -95,3 +95,18 @@
 ** Comprendre que la boucle permet de parcourir
 ** automatiquement les éléments d'un tableau.
 */
+
+#include <stdio.h>
+
+int main (void) 
+{
+    int tab[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};;
+    int i = 0;
+
+    while (i < 10) {
+        printf("%d\n", tab[i]);
+        i++;
+    }
+
+    return 0;
+};

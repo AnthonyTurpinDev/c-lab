@@ -120,3 +120,27 @@
 **        +
 **     %
 */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int tab[] = {1, 4, 7, 8, 10, 13, 16};
+
+    int indice = 0;
+    int compteur = 0;
+
+    while (indice < 7)
+    {
+        if (tab[indice] % 2 == 0)
+        {
+            compteur++;
+        }
+
+        indice++;
+    }
+
+    printf("Il y a %d nombres pairs.\n", compteur);
+
+    return 0;
+}

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Déclarer un tableau
 **
@@ -87,3 +89,17 @@
 **
 ** n'existe pas dans ce tableau.
 */
+
+
+int main (void) 
+{
+    int tab[5] = {10, 20, 30, 40, 50};
+    int i = 0;
+
+    while (i < 5) {
+        printf("%d\n", tab[i]);
+        i++;
+    }
+
+    return 0;
+};

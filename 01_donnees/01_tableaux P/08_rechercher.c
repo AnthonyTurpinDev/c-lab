@@ -141,3 +141,35 @@
 ** Cette logique sera très importante pour les exercices
 ** de recherche et d'algorithmes.
 */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int tab[] = {10, 25, 4, 17, 8, 30};
+
+    int indice = 0;
+    int nombre;
+    int trouve = 0;
+
+    printf("Nombre à rechercher : ");
+    scanf("%d", &nombre);
+
+    while (indice < 6)
+    {
+        if (tab[indice] == nombre)
+        {
+            trouve = 1;
+            printf("%d existe dans le tableau.\n", nombre);
+        }
+
+        indice++;
+    }
+
+    if (trouve == 0)
+    {
+        printf("%d n'existe pas dans le tableau.\n", nombre);
+    }
+
+    return 0;
+}

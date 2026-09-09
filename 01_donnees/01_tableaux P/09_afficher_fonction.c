@@ -152,3 +152,14 @@
 **        +
 **     boucles
 */
+
+void print_array(int tab[], int size)
+{
+    int indice = 0;
+
+    while (indice < size)
+    {
+        printf("%d\n", tab[indice]);
+        indice++;
+    }
+}

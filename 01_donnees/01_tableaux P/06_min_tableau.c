@@ -104,3 +104,26 @@
 **
 ** La différence principale se trouve dans la comparaison.
 */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int tab[5] = {4, 12, 7, 25, 3};
+    int indice = 1;
+    int minimum = tab[0];
+
+    while (indice < 5)
+    {
+        if (tab[indice] <= minimum)
+        {
+            minimum = tab[indice];
+        }
+
+        indice++;
+    }
+
+    printf("Minimum = %d\n", minimum);
+
+    return 0;
+}

@@ -105,3 +105,27 @@
 **     - compter certaines valeurs
 **     - rechercher une valeur
 */
+
+
+#include <stdio.h>
+
+int main(void)
+{
+    int tab[5] = {4, 12, 7, 25, 3};
+    int indice = 1;
+    int maximum = tab[0];
+
+    while (indice < 5)
+    {
+        if (tab[indice] >= maximum)
+        {
+            maximum = tab[indice];
+        }
+
+        indice++;
+    }
+
+    printf("Maximum = %d\n", maximum);
+
+    return 0;
+}
