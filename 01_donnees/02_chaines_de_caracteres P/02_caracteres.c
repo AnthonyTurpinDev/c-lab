@@ -35,3 +35,16 @@
 ** - Utiliser une boucle pour parcourir un tableau.
 ** - Comprendre progressivement la fin d'une chaîne.
 */
+
+#include <stdio.h>
+
+int main (void) 
+{
+    char str[] = "Bonjour";
+
+    while ()
+    {
+        /* code */
+    }
+    
+};

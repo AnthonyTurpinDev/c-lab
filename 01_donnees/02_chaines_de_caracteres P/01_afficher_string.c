@@ -27,3 +27,15 @@
 ** - Utiliser la variable str.
 ** - Ne pas afficher "Bonjour" directement dans printf.
 */
+
+#include <stdio.h>
+
+
+int main (void) 
+{
+    char str[] = "Bonjour";
+
+    printf("%s\n", str);
+
+    return 0;
+};

@@ -147,3 +147,36 @@
 ** algorithmique, pas seulement de faire fonctionner
 ** le programme.
 */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int tab[] = {10, 4, 25, 8, 17};
+
+    int indice = 1;
+    int maximum = tab[0];
+    int deuxieme = tab[1];
+
+   while (indice < 5)
+{
+    if (tab[indice] > maximum)
+    {
+        deuxieme = maximum;
+        maximum = tab[indice];
+    }
+    else if (tab[indice] < maximum && tab[indice] > deuxieme)
+    {
+        deuxieme = tab[indice];
+    }
+
+    indice++;
+}
+        
+    }
+
+
+
+
+
+

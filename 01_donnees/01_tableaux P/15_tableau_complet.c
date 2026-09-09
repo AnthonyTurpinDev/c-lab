@@ -247,3 +247,92 @@
 ** déjà une bonne partie des bases nécessaires
 ** pour manipuler les tableaux en C.
 */
+
+#include <stdio.h>
+
+void print_array(int tab[], int size)
+{
+    int i = 0;
+
+    printf("Tableau :\n");
+
+    while (i < size)
+    {
+        printf("%d", tab[i]);
+
+        if (i < size - 1)
+            printf(" ");
+
+        i++;
+    }
+
+    printf("\n");
+}
+
+int sum_array(int tab[], int size)
+{
+    int i = 0;
+    int sum = 0;
+
+    while (i < size)
+    {
+        sum += tab[i];
+        i++;
+    }
+
+    return sum;
+}
+
+int count_value(int tab[], int size, int value)
+{
+    int i = 0;
+    int count = 0;
+
+    while (i < size)
+    {
+        if (tab[i] == value)
+            count++;
+
+        i++;
+    }
+
+    return count;
+}
+
+int max_array(int tab[], int size)
+{
+    int i = 1;
+    int max = tab[0];
+
+    while (i < size)
+    {
+        if (tab[i] > max)
+            max = tab[i];
+
+        i++;
+    }
+
+    return max;
+}
+
+int main(void)
+{
+    int tab[] = {4, 7, 2, 9, 4, 1, 7, 4, 8, 2};
+    int size = sizeof(tab) / sizeof(tab[0]);
+    int value;
+    int count;
+
+    print_array(tab, size);
+
+    printf("Somme = %d\n", sum_array(tab, size));
+
+    printf("Valeur à rechercher : ");
+    scanf("%d", &value);
+
+    count = count_value(tab, size, value);
+    printf("%d apparaît %d fois.\n", value, count);
+
+    printf("Maximum = %d\n", max_array(tab, size));
+
+    return 0;
+}

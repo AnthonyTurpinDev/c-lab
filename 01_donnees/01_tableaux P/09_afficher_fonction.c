@@ -153,6 +153,19 @@
 **     boucles
 */
 
+#include <stdio.h>
+
+void print_array(int tab[], int size);
+
+int main(void)
+{
+    int tab[] = {10, 20, 30, 40, 50};
+
+    print_array(tab, 5);
+
+    return 0;
+}
+
 void print_array(int tab[], int size)
 {
     int indice = 0;
@@ -162,4 +175,4 @@ void print_array(int tab[], int size)
         printf("%d\n", tab[indice]);
         indice++;
     }
-}
+};

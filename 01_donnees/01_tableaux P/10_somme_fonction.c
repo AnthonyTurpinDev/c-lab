@@ -164,3 +164,28 @@
 **
 ** C'est une notion très importante pour la suite.
 */
+
+#include <stdio.h>
+
+int sum_array(int tab[], int size)
+{
+    int indice = 0;
+    int somme = 0;
+
+    while (indice < size)
+    {
+        somme = somme + tab[indice];
+        indice++;
+    }
+
+    return somme;
+}
+
+int main(void)
+{
+    int tab[] = {1, 2, 3, 4, 5};
+
+    printf("Somme = %d\n", sum_array(tab, 5));
+
+    return 0;
+}
