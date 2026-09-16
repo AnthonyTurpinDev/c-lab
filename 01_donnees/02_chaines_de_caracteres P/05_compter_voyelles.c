@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 ** EXERCICE : Compter les voyelles
 **
@@ -62,3 +64,33 @@
 **
 **     Voyelles = 3
 */
+
+int main (void) {
+
+    char str[100];
+    scanf("%s", str);
+
+    int compteur = 0;
+
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+
+        if ( str[i] == "a" || str[i] == "e" || str[i] == "i" || str[i] == "o" ||str[i] == "u")
+        {
+           printf("%c\n", str[i]); 
+
+           compteur++; 
+
+        }
+        else
+        {
+            /* code */
+        }
+        
+        
+        
+    }
+
+    return 0;
+
+}

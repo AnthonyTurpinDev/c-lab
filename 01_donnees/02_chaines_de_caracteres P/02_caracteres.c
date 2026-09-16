@@ -42,9 +42,10 @@ int main (void)
 {
     char str[] = "Bonjour";
 
-    while ()
+    for (int i = 0; str[i] != '\0'; i++)
     {
-        /* code */
+        printf("%c\n", str[i]);
     }
-    
-};
+
+    return 0;
+}
