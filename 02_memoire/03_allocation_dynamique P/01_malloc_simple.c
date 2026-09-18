@@ -128,3 +128,24 @@
 **     - realloc()
 **     - structures dynamiques
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+
+    int *p = malloc(sizeof(int));
+    *p = 45;
+    if (p == NULL)
+    {
+        printf("erreur \n");
+        return 1;
+    }
+
+    printf("adresse p %p\n", p);
+    printf("adresse du pointeur %d\n", *p);
+
+    free(p);
+    
+    return 0;
+};

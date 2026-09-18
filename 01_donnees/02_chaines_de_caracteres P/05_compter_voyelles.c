@@ -68,5 +68,10 @@
 int main (void) 
 {
     char str[100];
-    scanf("")
+    scanf("%s", str);
+
+    for () {
+        
+    }
+
 }
