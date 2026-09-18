@@ -149,3 +149,34 @@
 **     - realloc()
 **     - allocation de structures
 */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int *tab = malloc(5 * sizeof(int));
+
+    if (tab == NULL)
+    {
+        printf("Erreur d'allocation\n");
+        return 1;
+    }
+
+    // Remplir le tableau
+    for (int i = 0; i < 5; i++)
+    {
+        tab[i] = (i + 1) * 10;
+    }
+
+    // Afficher le tableau
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d\n", tab[i]);
+    }
+
+    // Libérer la mémoire
+    free(tab);
+
+    return 0;
+}
+

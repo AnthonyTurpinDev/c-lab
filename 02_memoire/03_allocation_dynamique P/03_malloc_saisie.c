@@ -156,3 +156,48 @@
 ** Cette notion est essentielle avant de passer à des
 ** exercices plus avancés sur l'allocation dynamique.
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int taille;
+
+    // Demander la taille
+    printf("Combien de nombres ? ");
+    scanf("%d", &taille);
+
+    // Allouer exactement "taille" int
+    int *tab = malloc(taille * sizeof(int));
+
+    // Vérifier malloc
+    if (tab == NULL)
+    {
+        printf("Erreur d'allocation\n");
+        return 1;
+    }
+
+    // Saisir les nombres
+    for (int i = 0; i < taille; i++)
+    {
+        printf("Entrez le nombre %d : ", i + 1);
+        scanf("%d", &tab[i]);
+    }
+
+    // Afficher les nombres
+    printf("Résultat : ");
+
+    for (int i = 0; i < taille; i++)
+    {
+        printf("%d ", tab[i]);
+    }
+
+    printf("\n");
+
+    // Libérer la mémoire
+    free(tab);
+
+    return 0;
+}
+
